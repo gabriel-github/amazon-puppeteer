@@ -21,7 +21,7 @@ async function sleepFor(page, min, max) {
   await sleepFor(page, 1000, 2000);
 
   await page.waitForSelector('[type="text"]');
-  await page.type('[type="text"]', "gabrielferrsantos201@gmail.com");
+  await page.type('[type="text"]', "email@gmail.com");
 
   await page.waitForTimeout(3000);
 
@@ -34,7 +34,10 @@ async function sleepFor(page, min, max) {
   await page.waitForTimeout(3000);
 
   await page.waitForSelector('[data-testid="ocfEnterTextTextInput"]');
-  await page.type('[data-testid="ocfEnterTextTextInput"]', "18998134600");
+  await page.type(
+    '[data-testid="ocfEnterTextTextInput"]',
+    "numero de telefone"
+  );
 
   await page.waitForTimeout(4000);
 
@@ -46,7 +49,7 @@ async function sleepFor(page, min, max) {
   await page.waitForTimeout(3000);
 
   await page.waitForSelector('[name="password"]');
-  await page.type('[name="password"]', "gabrielferrtest1234");
+  await page.type('[name="password"]', "senha teste");
 
   await page.waitForTimeout(4000);
   const buttonSign = await page.waitForXPath(
