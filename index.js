@@ -1,8 +1,6 @@
 const puppeteer = require("puppeteer");
 const fs = require("fs");
 
-// a-section a-spacing-small s-padding-left-small s-padding-right-small
-
 (async () => {
   const browser = await puppeteer.launch({
     headless: false,
@@ -68,5 +66,5 @@ const fs = require("fs");
     }
   );
 
-  // await browser.close();
+  await browser.close();
 })();
